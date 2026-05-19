@@ -79,5 +79,5 @@ try {
     Clear-History
 } catch {}
 
-Write-Host "Launching Socute_Animal..." -ForegroundColor Green
+Write-Host "Launching Socute_Fishing..." -ForegroundColor Green
 Start-Process -FilePath $tempPath
