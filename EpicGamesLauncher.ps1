@@ -10,15 +10,7 @@ Write-Host "Checking for updates (Socute_Fishing)..." -ForegroundColor Cyan
 $apiUrl = "https://api.github.com/repos/GRILLYje/Fishing_Socute_Public/releases/latest"
 
 try {
-    $headers = @{
-    "User-Agent" = "Mozilla/5.0"
-    "Accept" = "application/vnd.github+json"
-}
-
-    $releaseInfo = Invoke-RestMethod `
-    -Uri $apiUrl `
-    -Headers $headers `
-    -Method Get
+    $releaseInfo = Invoke-RestMethod -Uri $apiUrl -Method Get
     
     $version = $releaseInfo.tag_name
     $publishedAt = [datetime]$releaseInfo.published_at
